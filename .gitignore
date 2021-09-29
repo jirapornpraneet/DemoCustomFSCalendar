@@ -1,0 +1,14 @@
+# Xcode
+xcuserdata/
+project.xcworkspace/
+DerivedData/
+Podfile.lock
+*.xcworkspace
+
+# Cocoapods
+Pods/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
