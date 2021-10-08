@@ -70,6 +70,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A3E4BDF27103C550068FE5C /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				6A3E4BD927103BBF0068FE5C /* EventViewController.swift */,
+				6A3E4BDA27103BBF0068FE5C /* EventViewModel.swift */,
+				6A3E4BDB27103BBF0068FE5C /* EventViewController+View.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		6A98322A271036B400EB7866 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +102,7 @@
 		6A983232271039CD00EB7866 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				6A3E4BD927103BBF0068FE5C /* EventViewController.swift */,
-				6A3E4BDA27103BBF0068FE5C /* EventViewModel.swift */,
-				6A3E4BDB27103BBF0068FE5C /* EventViewController+View.swift */,
+				6A3E4BDF27103C550068FE5C /* Event */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
