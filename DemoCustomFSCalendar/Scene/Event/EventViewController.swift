@@ -22,10 +22,37 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        fetchMenu()
     }
 
     func updateMonth(_ date: Date) {
         btnMonth.setTitle(date.toString(format: "MMMM yyyy"),for: .normal)
+    }
+    
+    func fetchMenu() {
+        viewModel.fetchMenu {
+            self.updateInterface()
+        }
+    }
+    
+    func updateInterface() {
+        self.calendar.isUserInteractionEnabled = true
+        self.calendar.reloadData()
+    }
+    
+    //MARK: - Action
+    @IBAction func previousMonthAction(_ sender: UIButton) {
+        if let previousMonth = Calendar.current.date(byAdding: .month, value: -1, to: calendar.currentPage) {
+            calendar.setCurrentPage(previousMonth, animated: true)
+            updateMonth(previousMonth)
+        }
+    }
+    
+    @IBAction func nextMonthAction(_ sender: UIButton) {
+        if let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: calendar.currentPage) {
+            calendar.setCurrentPage(nextMonth, animated: true)
+            updateMonth(nextMonth)
+        }
     }
 }
 

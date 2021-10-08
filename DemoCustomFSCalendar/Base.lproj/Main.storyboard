@@ -110,6 +110,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="80"/>
                                                 <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="ic_arrow_left_color"/>
+                                                <connections>
+                                                    <action selector="previousMonthAction:" destination="MYP-Rq-hA2" eventType="touchUpInside" id="hRN-BL-61M"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-SD-pRf">
                                                 <rect key="frame" x="10" y="0.0" width="394" height="80"/>
@@ -122,6 +125,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="80"/>
                                                 <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="ic_arrow_right_color"/>
+                                                <connections>
+                                                    <action selector="nextMonthAction:" destination="MYP-Rq-hA2" eventType="touchUpInside" id="O7d-HZ-5fh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
@@ -185,6 +191,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ki4-x2-4Fd"/>
+                    <connections>
+                        <outlet property="btnMonth" destination="ei2-SD-pRf" id="Isy-Qu-77u"/>
+                        <outlet property="btnNext" destination="A4u-Pj-fla" id="hlV-3E-k1b"/>
+                        <outlet property="btnPrvs" destination="aYU-M6-vre" id="gLU-SL-yq1"/>
+                        <outlet property="calendar" destination="UXV-pH-hmY" id="cB1-XY-TBX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYZ-Mp-P8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
