@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SukhumvitSet-SemiBold.ttf">
+            <string>SukhumvitSet-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -94,8 +99,90 @@
                     <view key="view" contentMode="scaleToFill" id="TRt-Zu-QuR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJP-2V-G4h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-EO-89H">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYU-M6-vre">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="80"/>
+                                                <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="ic_arrow_left_color"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-SD-pRf">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="80"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="21"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-Pj-fla">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="80"/>
+                                                <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="ic_arrow_right_color"/>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.50977170719999998" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="yGT-EO-89H" firstAttribute="leading" secondItem="YJP-2V-G4h" secondAttribute="leading" id="69D-6l-kJQ"/>
+                                    <constraint firstItem="yGT-EO-89H" firstAttribute="top" secondItem="YJP-2V-G4h" secondAttribute="top" id="AOP-Yu-BrP"/>
+                                    <constraint firstAttribute="height" constant="80" id="GA8-vz-W6M"/>
+                                    <constraint firstAttribute="trailing" secondItem="yGT-EO-89H" secondAttribute="trailing" id="vJR-ij-Mpa"/>
+                                    <constraint firstAttribute="bottom" secondItem="yGT-EO-89H" secondAttribute="bottom" id="xd7-m6-sKr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXV-pH-hmY" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="80" width="414" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.50977170719999998" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ILL-jY-10L"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleWeekendColor">
+                                        <color key="value" red="0.94509803920000002" green="0.81568627449999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                        <color key="value" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lrw-U3-NxC"/>
                         <color key="backgroundColor" red="1" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lrw-U3-NxC" firstAttribute="trailing" secondItem="YJP-2V-G4h" secondAttribute="trailing" id="KTG-M4-qwB"/>
+                            <constraint firstItem="YJP-2V-G4h" firstAttribute="leading" secondItem="lrw-U3-NxC" secondAttribute="leading" id="Uj3-GV-mbo"/>
+                            <constraint firstItem="UXV-pH-hmY" firstAttribute="leading" secondItem="lrw-U3-NxC" secondAttribute="leading" id="jBM-5R-r6w"/>
+                            <constraint firstItem="YJP-2V-G4h" firstAttribute="top" secondItem="lrw-U3-NxC" secondAttribute="top" id="roR-7z-aXl"/>
+                            <constraint firstItem="UXV-pH-hmY" firstAttribute="top" secondItem="YJP-2V-G4h" secondAttribute="bottom" id="x2T-NQ-M7Z"/>
+                            <constraint firstItem="lrw-U3-NxC" firstAttribute="trailing" secondItem="UXV-pH-hmY" secondAttribute="trailing" id="zfz-cu-bxY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ki4-x2-4Fd"/>
                 </viewController>
@@ -104,4 +191,8 @@
             <point key="canvasLocation" x="1501" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_arrow_left_color" width="11.333333015441895" height="18.666666030883789"/>
+        <image name="ic_arrow_right_color" width="11.333333015441895" height="18.666666030883789"/>
+    </resources>
 </document>
