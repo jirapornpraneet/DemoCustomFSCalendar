@@ -10,12 +10,13 @@ import UIKit
 
 class EventInfo: NSObject {
     
+    var id = 0
     var dateStart: Date?
     var dateEnd: Date?
     var typeId: Int?
     var color: UIColor {
         guard leaveType != .Unspecified else { return leaveType.color }
-        return UIColor(named: "#F46A6A")!
+        return UIColor.black
     }
 
     var leaveType: LeaveType {
@@ -27,8 +28,9 @@ class EventInfo: NSObject {
         }
     }
     
-    init(dateStart: String,dateEnd: String, typeId: Int, title: String) {
+    init(id: Int,dateStart: String,dateEnd: String, typeId: Int, title: String) {
         super.init()
+        self.id = id
         self.dateStart = dateStart.toDate()
         self.dateEnd = dateEnd.toDate()
         self.typeId = typeId
