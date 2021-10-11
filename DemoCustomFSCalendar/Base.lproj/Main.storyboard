@@ -102,7 +102,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ปฏิทิน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-9Y-y0P">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
-                                                        <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -163,6 +163,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
                                                                         <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <state key="normal" image="ic_arrow_left_color"/>
+                                                                        <connections>
+                                                                            <action selector="previousMonthAction:" destination="csy-7o-4hV" eventType="touchUpInside" id="WSZ-7L-loT"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -206,6 +209,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
                                                                         <color key="tintColor" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <state key="normal" image="ic_arrow_right_color"/>
+                                                                        <connections>
+                                                                            <action selector="nextMonthAction:" destination="csy-7o-4hV" eventType="touchUpInside" id="n03-YL-4kj"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -264,6 +270,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="17"/>
                                         <state key="normal" title="ยืนยัน"/>
+                                        <connections>
+                                            <action selector="confirmAction:" destination="csy-7o-4hV" eventType="touchUpInside" id="e9q-Uf-6RI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,6 +302,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rPs-NP-5SQ"/>
+                    <connections>
+                        <outlet property="btnConfirm" destination="5on-uU-4ad" id="E8k-cZ-cmB"/>
+                        <outlet property="btnNextMonth" destination="12P-gQ-0fm" id="xSH-pi-DtH"/>
+                        <outlet property="btnPrevMonth" destination="mHz-aI-zdI" id="vXp-pD-Qde"/>
+                        <outlet property="calendar" destination="wbB-aY-UJ1" id="ZHg-Zw-gEm"/>
+                        <outlet property="lblMessage" destination="7eh-eW-UGi" id="v5i-SI-q3N"/>
+                        <outlet property="monthLabel" destination="v31-Fb-n7i" id="XBK-7M-Pb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Su0-p7-vKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,8 +427,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_arrow_left_color" width="11.333333015441895" height="18.666666030883789"/>
-        <image name="ic_arrow_right_color" width="11.333333015441895" height="18.666666030883789"/>
+        <image name="ic_arrow_left_color" width="11.5" height="18.5"/>
+        <image name="ic_arrow_right_color" width="11.5" height="18.5"/>
         <image name="ic_close_circle" width="19.333333969116211" height="19.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
