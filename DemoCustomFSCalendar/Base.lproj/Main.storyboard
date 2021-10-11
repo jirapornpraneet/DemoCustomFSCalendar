@@ -355,7 +355,7 @@
                                                 <rect key="frame" x="10" y="0.0" width="394" height="80"/>
                                                 <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="21"/>
                                                 <state key="normal" title="-">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-Pj-fla">
@@ -370,7 +370,7 @@
                                         <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.50977170719999998" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.76838833470000001" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="yGT-EO-89H" firstAttribute="leading" secondItem="YJP-2V-G4h" secondAttribute="leading" id="69D-6l-kJQ"/>
                                     <constraint firstItem="yGT-EO-89H" firstAttribute="top" secondItem="YJP-2V-G4h" secondAttribute="top" id="AOP-Yu-BrP"/>
@@ -381,22 +381,22 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXV-pH-hmY" customClass="FSCalendar">
                                 <rect key="frame" x="0.0" y="80" width="414" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.50977170719999998" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.73736721650000003" blue="0.69360330219999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ILL-jY-10L"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
                                         <real key="value" value="35"/>
@@ -405,7 +405,7 @@
                                         <real key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleWeekendColor">
-                                        <color key="value" red="0.94509803920000002" green="0.81568627449999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" systemColor="tintColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
                                         <color key="value" red="0.37254901959999998" green="0.46274509800000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -417,7 +417,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lrw-U3-NxC"/>
-                        <color key="backgroundColor" red="1" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lrw-U3-NxC" firstAttribute="trailing" secondItem="YJP-2V-G4h" secondAttribute="trailing" id="KTG-M4-qwB"/>
                             <constraint firstItem="YJP-2V-G4h" firstAttribute="leading" secondItem="lrw-U3-NxC" secondAttribute="leading" id="Uj3-GV-mbo"/>
@@ -449,6 +449,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

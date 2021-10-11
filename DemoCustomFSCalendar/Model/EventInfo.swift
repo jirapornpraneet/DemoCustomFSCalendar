@@ -16,7 +16,7 @@ class EventInfo: NSObject {
     var typeId: Int?
     var color: UIColor {
         guard leaveType != .Unspecified else { return leaveType.color }
-        return UIColor.black
+        return #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
     }
 
     var leaveType: LeaveType {
