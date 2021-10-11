@@ -80,6 +80,30 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
+		6A6D822A2713F3750044D605 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6AFE2FBF270C0FB1006D6D81 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		6A6D822B2713F3A00044D605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A6D822C2713F3AB0044D605 /* Custom */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A6D822C2713F3AB0044D605 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				6A98321C271030F400EB7866 /* CalendarCell.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		6A98322A271036B400EB7866 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +126,7 @@
 		6A983232271039CD00EB7866 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6A6D822A2713F3750044D605 /* Calendar */,
 				6A3E4BDF27103C550068FE5C /* Event */,
 			);
 			path = Scene;
@@ -137,9 +162,8 @@
 				CD478825270451E1009B9FF8 /* Info.plist */,
 				6A983231271037DB00EB7866 /* Model */,
 				6A98322A271036B400EB7866 /* Extensions */,
+				6A6D822B2713F3A00044D605 /* View */,
 				6A983232271039CD00EB7866 /* Scene */,
-				6AFE2FBF270C0FB1006D6D81 /* CalendarViewController.swift */,
-				6A98321C271030F400EB7866 /* CalendarCell.swift */,
 			);
 			path = DemoCustomFSCalendar;
 			sourceTree = "<group>";
