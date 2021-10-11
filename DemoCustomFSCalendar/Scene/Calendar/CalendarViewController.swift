@@ -18,6 +18,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var btnNextMonth: UIButton!
     @IBOutlet weak var btnPrevMonth: UIButton!
     @IBOutlet weak var lblMessage: UILabel?
+    @IBOutlet weak var lblDateConfirm: UILabel?
 
     var onSelected: ((_ range: DateRange)->())?
     var onSelectedOver: (()->())?
@@ -81,14 +82,6 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    // Action
-    
-    @IBAction func pickerAction(_ sender: UIButton) {
-        guard !minimumDate.hasSame(.month, as: maximumDate) else {
-            return
-        }
-    }
-    
     @IBAction func previousMonthAction(_ sender: UIButton) {
         if let previousMonth = Calendar.current.date(byAdding: .month, value: -1, to: calendar.currentPage) {
             calendar.setCurrentPage(previousMonth, animated: true)
@@ -114,6 +107,34 @@ class CalendarViewController: UIViewController {
         }
         guard let _range = self.range else { return }
         self.onSelected?(_range)
+        displayConfirmDate(dates: calendar.selectedDates.sorted(by: { $0.compare($1) == .orderedAscending }))
+    }
+    
+    func displayConfirmDate(dates: [Date]) {
+        selected.removeAll()
+        for date in dates {
+            selected.append(date)
+        }
+        
+        if dates.count == 0 {
+            lblMessage?.text = "-"
+        } else {
+            let dateFormatter1 = DateFormatter()
+            dateFormatter1.dateFormat = "d MMMM yyyy"
+            dateFormatter1.locale = .th
+            
+            if dates.count == 1  {
+                lblDateConfirm?.text = dateFormatter1.string(from: dates[0])
+            } else if dates.count == 2  {
+                if dates[0].hasSame(.year, as: dates[1]) {
+                    dateFormatter1.dateFormat = "d MMMM"
+                }
+                let dateFormatter2 = DateFormatter()
+                dateFormatter2.dateFormat = "d MMMM yyyy"
+                dateFormatter2.locale = .th
+                lblDateConfirm?.text = dateFormatter1.string(from: dates[0]) + " ถึง " + dateFormatter2.string(from: dates[1])
+            }
+        }
     }
     
     func displayRangeDates(dates: [Date]) {

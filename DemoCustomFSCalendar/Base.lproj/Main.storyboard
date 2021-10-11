@@ -291,13 +291,26 @@
                                     <constraint firstItem="5on-uU-4ad" firstAttribute="centerX" secondItem="NeF-BV-U43" secondAttribute="centerX" id="vZ2-yy-4zV"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVc-FK-c0F">
+                                <rect key="frame" x="0.0" y="547.5" width="414" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="puQ-bS-juG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2P0-IX-srb"/>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.46274509803921571" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NeF-BV-U43" firstAttribute="top" secondItem="2P0-IX-srb" secondAttribute="top" id="8kA-qJ-OLX"/>
+                            <constraint firstItem="oVc-FK-c0F" firstAttribute="leading" secondItem="2P0-IX-srb" secondAttribute="leading" id="HDu-X4-tZp"/>
                             <constraint firstItem="2P0-IX-srb" firstAttribute="trailing" secondItem="NeF-BV-U43" secondAttribute="trailing" id="WFP-2L-WgK"/>
                             <constraint firstItem="NeF-BV-U43" firstAttribute="height" secondItem="M9d-tW-sOq" secondAttribute="height" multiplier="0.65" id="cRT-Qj-ePp"/>
+                            <constraint firstItem="oVc-FK-c0F" firstAttribute="top" secondItem="NeF-BV-U43" secondAttribute="bottom" id="oZn-cb-KyO"/>
+                            <constraint firstItem="2P0-IX-srb" firstAttribute="trailing" secondItem="oVc-FK-c0F" secondAttribute="trailing" id="vv5-1e-yHP"/>
                             <constraint firstItem="NeF-BV-U43" firstAttribute="leading" secondItem="2P0-IX-srb" secondAttribute="leading" id="xMf-1L-tgr"/>
                         </constraints>
                     </view>
@@ -307,6 +320,7 @@
                         <outlet property="btnNextMonth" destination="12P-gQ-0fm" id="xSH-pi-DtH"/>
                         <outlet property="btnPrevMonth" destination="mHz-aI-zdI" id="vXp-pD-Qde"/>
                         <outlet property="calendar" destination="wbB-aY-UJ1" id="ZHg-Zw-gEm"/>
+                        <outlet property="lblDateConfirm" destination="oVc-FK-c0F" id="UxG-tN-mFN"/>
                         <outlet property="lblMessage" destination="7eh-eW-UGi" id="v5i-SI-q3N"/>
                         <outlet property="monthLabel" destination="v31-Fb-n7i" id="XBK-7M-Pb7"/>
                     </connections>
